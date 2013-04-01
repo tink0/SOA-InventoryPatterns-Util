@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 18, 2013 10:50:03 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping schema="sapexport">
+    <class name="sk.tuke.seregely.dipl.util.entity.GpsExport" table="gpsexport">
+        <id name="id" type="int">
+            <column name="id" />
+             <generator class="sequence" >
+              <param name="sequence">gpsexport_id_seq</param>
+              </generator>
+        </id>
+        <property name="idVozidla" type="int">
+            <column name="vozidlo" />
+        </property>
+        <property name="idJazdy" type="int">
+            <column name="id_jazdy" />
+        </property>
+        <property name="vodic" type="int">
+            <column name="vodic" />
+        </property>
+         <property name="zaciatok" type="timestamp">
+            <column name="zaciatok" length="29" />
+        </property>
+         <property name="koniec" type="timestamp">
+            <column name="koniec" length="29" />
+        </property>
+    </class>
+</hibernate-mapping>
