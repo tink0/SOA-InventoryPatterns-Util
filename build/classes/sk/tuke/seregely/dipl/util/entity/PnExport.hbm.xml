@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 18, 2013 10:50:03 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping schema="sapexport">
+    <class name="sk.tuke.seregely.dipl.util.entity.PnExport" table="pnexport">
+        <id name="idPn" type="int">
+            <column name="idpn" />
+             <generator class="assigned" />
+        </id>
+        <property name="zamestnanec" type="int">
+            <column name="id_zamestnanca" />
+        </property>
+         <property name="zaciatok" type="timestamp">
+            <column name="zaciatok" length="29" />
+        </property>
+         <property name="koniec" type="timestamp">
+            <column name="koniec" length="29" />
+        </property>
+    </class>
+</hibernate-mapping>
+

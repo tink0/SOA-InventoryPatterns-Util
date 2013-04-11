@@ -1,12 +1,12 @@
 package db;
 
-import javax.naming.InitialContext;
-
 import org.hibernate.SessionFactory;
-
 import org.hibernate.cfg.Configuration;
 
+import sk.tuke.seregely.dipl.util.entity.DovolenkaExport;
 import sk.tuke.seregely.dipl.util.entity.GpsExport;
+import sk.tuke.seregely.dipl.util.entity.PdExport;
+import sk.tuke.seregely.dipl.util.entity.PnExport;
 
 public class HibernateUtil {
 
@@ -23,12 +23,12 @@ public class HibernateUtil {
    		 .setProperty("hibernate.connection.username", "postgres")
    		 .setProperty("hibernate.current_session_context_class","org.hibernate.context.ThreadLocalSessionContext")
    		 .setProperty("hibernate.connection.password", "superpass")
-   		 .addClass(GpsExport.class);
+   		 .addClass(GpsExport.class)
+   		 .addClass(PdExport.class)
+   		 .addClass(PnExport.class)
+   		 .addClass(DovolenkaExport.class);
            
            SessionFactory sessFact = configuration.buildSessionFactory();
-           InitialContext ctx = new InitialContext();
-        //   System.out.println(ctx.lookup("sessFact"));
-        //   if(!(ctx.lookup("sessFact") instanceof SessionFactory)) ctx.bind("sessFact", sessFact);
             return sessFact;
         }
         catch (Throwable ex) {

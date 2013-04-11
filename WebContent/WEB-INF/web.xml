@@ -18,4 +18,13 @@
     <servlet-name>GpsExport</servlet-name>
     <url-pattern>/GpsExport</url-pattern>
   </servlet-mapping>
+   <servlet>
+    <display-name>EmailSender</display-name>
+    <servlet-name>EmailSender</servlet-name>
+    <servlet-class>sk.tuke.seregely.dipl.util.services.EmailSender</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmailSender</servlet-name>
+    <url-pattern>/EmailSender</url-pattern>
+  </servlet-mapping>
 </web-app>
